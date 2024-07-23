@@ -8,6 +8,7 @@
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"test": "vitest",
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write ."
 	},
@@ -27,7 +28,8 @@
 		"tslib": "^2.4.1",
 		"typescript": "^5.0.0",
 		"typescript-eslint": "^8.0.0-alpha.20",
-		"vite": "^5.0.3"
+		"vite": "^5.0.3",
+		"vitest": "^1.2.0"
 	},
 	"type": "module"
 }
