@@ -32,7 +32,8 @@
 	"type": "module",
 	"dependencies": {
 		"nostr-typedef": "^0.8.0",
-		"rx-nostr": "^2.6.2",
+		"rx-nostr": "^3.3.0",
+		"rx-nostr-crypto": "^3.1.0",
 		"rxjs": "^7.8.1",
 		"ws": "^8.16.0"
 	}

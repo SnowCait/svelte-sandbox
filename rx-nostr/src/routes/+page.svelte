@@ -12,6 +12,9 @@
 		<a href="/performance">Performance</a>
 	</li>
 	<li>
+		<a href="/web-worker">Web Worker</a>
+	</li>
+	<li>
 		<a href="/empty">Empty</a>
 	</li>
 </ul>
