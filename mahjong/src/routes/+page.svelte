@@ -1,11 +1,12 @@
 <script lang="ts">
-	import { thirteenOrphans } from '$lib/evaluation';
+	import { sevenPairs, thirteenOrphans } from '$lib/evaluation';
 	import { parseHand, sortHand } from '$lib/mahjong';
 
 	let handString = '';
 
 	$: hand = sortHand(parseHand(handString));
 	$: thirteenOrphansRemaining = thirteenOrphans(hand).remaining;
+	$: sevenPairsRemaining = sevenPairs(hand).remaining;
 </script>
 
 <main>
@@ -15,10 +16,16 @@
 		<input type="text" bind:value={handString} />
 	</form>
 
-	<div>{hand.map((tile) => tile.toString()).join('')}</div>
+	<div>
+		<span>{hand.map((tile) => tile.toString()).join('')}</span>
+		<span>({hand.length} 枚)</span>
+	</div>
 	{#if hand.length === 13}
 		<div>
 			国士無双 {#if thirteenOrphansRemaining === 1}聴牌{:else}{thirteenOrphansRemaining - 1} 向聴{/if}
+		</div>
+		<div>
+			七対子 {#if sevenPairsRemaining === 1}聴牌{:else}{sevenPairsRemaining - 1} 向聴{/if}
 		</div>
 	{/if}
 </main>

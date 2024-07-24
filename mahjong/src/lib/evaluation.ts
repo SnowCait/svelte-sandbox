@@ -26,3 +26,12 @@ export const thirteenOrphans = (tiles: Tile[]): Evaluation => {
 		remaining: 14 - hasCount - (doubleHasCount > 0 ? 1 : 0)
 	};
 };
+
+export const sevenPairs = (tiles: Tile[]): Evaluation => {
+	const groupedTiles = groupTiles(tiles);
+	const pairsCount = [...groupedTiles].filter(([, count]) => count >= 2).length;
+	const singleCount = [...groupedTiles].filter(([, count]) => count === 1).length;
+	return {
+		remaining: 14 - pairsCount * 2 - Math.min(7 - pairsCount, singleCount)
+	};
+};
