@@ -1,7 +1,14 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import type { Event } from 'nostr-typedef';
-	import { createRxBackwardReq, createRxNostr, filterByKind, latestEach, uniq } from 'rx-nostr';
+	import {
+		createRxBackwardReq,
+		createRxNostr,
+		filterByKind,
+		latestEach,
+		uniq,
+		type LazyFilter
+	} from 'rx-nostr';
 	import { createNoopClient, createVerificationServiceClient } from 'rx-nostr-crypto';
 	import { onDestroy, onMount } from 'svelte';
 	import workerUrl from '$lib/worker?worker&url';
@@ -54,6 +61,17 @@
 		depth++;
 
 		const ids = event.tags.filter(([t]) => t === 'e').map(([, id]) => id);
+		const filters: LazyFilter[] = [
+			{
+				kinds: [0],
+				authors: [event.pubkey]
+			}
+		];
+		if (ids.length > 0) {
+			filters.push({
+				ids
+			});
+		}
 
 		const req = createRxBackwardReq();
 		const observable$ = rxNostr.use(req).pipe(uniq(), share());
@@ -89,15 +107,7 @@
 					console.error('[kind 1]', depth, error);
 				}
 			});
-		req.emit([
-			{
-				kinds: [0],
-				authors: [event.pubkey]
-			},
-			{
-				ids
-			}
-		]);
+		req.emit(filters);
 		req.over();
 	}
 </script>
