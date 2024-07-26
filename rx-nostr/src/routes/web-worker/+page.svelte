@@ -20,21 +20,22 @@
 	rxNostr.setDefaultRelays(relays);
 	verificationClient.start();
 
+	const depth = 0;
 	const req = createRxBackwardReq();
 	const subscription = rxNostr
 		.use(req)
 		.pipe(
 			uniq(),
-			tap(({ event }) => references(event, 1))
+			tap(({ event }) => references(event, depth))
 		)
 		.subscribe({
 			next: ({ event }) => {
-				console.log('[kind 1]', 0, event.id);
+				console.log('[kind 1]', depth, event.id);
 				events.set(event.id, event);
 			},
 			complete: () => console.log('[count]', events.size),
 			error: (error) => {
-				console.error('[kind 1]', 0, error);
+				console.error('[kind 1]', depth, error);
 			}
 		});
 
@@ -50,6 +51,8 @@
 	});
 
 	function references(event: Event, depth = 0): void {
+		depth++;
+
 		const ids = event.tags.filter(([t]) => t === 'e').map(([, id]) => id);
 
 		const req = createRxBackwardReq();
@@ -73,7 +76,7 @@
 		observable$
 			.pipe(
 				filterByKind(1),
-				tap(({ event }) => references(event, depth + 1))
+				tap(({ event }) => references(event, depth))
 			)
 			.subscribe({
 				next: ({ event }) => {
