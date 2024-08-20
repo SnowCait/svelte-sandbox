@@ -5,4 +5,7 @@
 	<li>
 		<a href="collapsible">Collapsible</a>
 	</li>
+	<li>
+		<a href="tabs">Tabs</a>
+	</li>
 </ul>
