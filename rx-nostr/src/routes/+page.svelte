@@ -17,4 +17,10 @@
 	<li>
 		<a href="/empty">Empty</a>
 	</li>
+	<li>
+		<a href="/nip07">NIP-07</a>
+	</li>
+	<li>
+		<a href="/auth">AUTH</a>
+	</li>
 </ul>
