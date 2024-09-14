@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { SSE } from 'sse.js';
-	import { type Filter } from 'nostr-typedef';
+	import type { Filter, Event } from 'nostr-typedef';
 
 	function req() {
 		const relays = ['wss://yabu.me/', 'wss://nos.lol/'];
@@ -9,15 +9,12 @@
 				limit: 50
 			}
 		];
-		const eventSource = new SSE('http://127.0.0.1:8787/req', {
+		const source = new SSE('http://127.0.0.1:8787/req', {
 			method: 'POST',
 			payload: JSON.stringify({ relays, filters })
 		});
-		eventSource.addEventListener('EVENT', (e: MessageEvent) => {
+		source.addEventListener('message', (e: MessageEvent<Event>) => {
 			console.log(e.data);
-		});
-		eventSource.addEventListener('EOSE', () => {
-			eventSource.close();
 		});
 	}
 </script>
