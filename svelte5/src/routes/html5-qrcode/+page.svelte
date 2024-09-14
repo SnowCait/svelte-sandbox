@@ -1,8 +1,24 @@
 <script lang="ts">
 	import { Html5QrcodeScanner } from 'html5-qrcode';
+	import { nip19 } from 'nostr-tools';
 	import { onMount } from 'svelte';
 
 	let nprofile = '';
+	let pubkey = '';
+
+	$: if (nprofile) {
+		const { type, data } = nip19.decode(nprofile.substring('nostr:'.length));
+		switch (type) {
+			case 'npub': {
+				pubkey = data;
+				break;
+			}
+			case 'nprofile': {
+				pubkey = data.pubkey;
+				break;
+			}
+		}
+	}
 
 	onMount(() => {
 		const scanner = new Html5QrcodeScanner(
@@ -25,4 +41,4 @@
 
 <div id="reader"></div>
 
-<div>{nprofile}</div>
+<div>{pubkey}</div>
