@@ -3,7 +3,7 @@
 	import { Html5QrcodeScanner } from 'html5-qrcode';
 	import { onMount } from 'svelte';
 
-	$: onMount(() => {
+	onMount(() => {
 		const scanner = new Html5QrcodeScanner(
 			'reader',
 			{
