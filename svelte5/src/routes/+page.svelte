@@ -7,4 +7,7 @@
 	<li>
 		<a href="/cloudflare/sse">Cloudflare SSE</a>
 	</li>
+	<li>
+		<a href="/html5-qrcode">html5-qrcode</a>
+	</li>
 </ul>
