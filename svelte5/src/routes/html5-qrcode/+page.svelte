@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { Html5QrcodeScanner } from 'html5-qrcode';
-	import type { Html5QrcodeResult } from 'html5-qrcode/esm/core';
 	import { onMount } from 'svelte';
+
+	let nprofile = '';
 
 	onMount(() => {
 		const scanner = new Html5QrcodeScanner(
@@ -12,13 +13,16 @@
 			},
 			false
 		);
-		scanner.render(
-			(text: string, result: Html5QrcodeResult) => {
-				console.log('[qr]', text, result);
-			},
-			(error) => console.error(error)
-		);
+		scanner.render((text: string) => {
+			console.log('[qr]', text);
+			if (text.startsWith('nostr:')) {
+				nprofile = text;
+				scanner.pause(true);
+			}
+		}, undefined);
 	});
 </script>
 
 <div id="reader"></div>
+
+<div>{nprofile}</div>
