@@ -9,7 +9,7 @@
 				limit: 50
 			}
 		];
-		const source = new SSE('http://127.0.0.1:8787/req', {
+		const source = new SSE('http://127.0.0.1:8787/req/stream', {
 			method: 'POST',
 			payload: JSON.stringify({ relays, filters })
 		});
