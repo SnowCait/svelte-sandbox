@@ -1,10 +1,12 @@
 <script lang="ts">
 	import type { Event } from 'nostr-typedef';
 	import { NostrFetcher } from 'nostr-fetch';
+	import { SimplePool } from 'nostr-tools';
 	import { onDestroy, onMount } from 'svelte';
 
 	const relays = ['wss://yabu.me/', 'wss://nos.lol/'];
 	const fetcher = NostrFetcher.init();
+	const pool = new SimplePool();
 	const minutesAgo = (n: number, time = Math.floor(Date.now() / 1000)): number => time - n * 60;
 	const getUntil = (): number =>
 		events.length > 0
@@ -20,6 +22,7 @@
 
 	onDestroy(() => {
 		fetcher.shutdown();
+		pool.close(relays);
 	});
 
 	async function load() {
@@ -31,20 +34,22 @@
 			{ since: minutesAgo(1, until), until }
 		);
 		for await (const event of iterator) {
+			if (events.some((e) => e.id === event.id)) {
+				continue;
+			}
 			events.push(event);
 			events = events;
 		}
 
-		const num = events.length - startLength;
-		if (num < 50) {
-			const e = await fetcher.fetchLatestEvents(
-				relays,
-				{ kinds: [1] /*, until: getUntil()*/ },
-				50 - num
-			);
-			events.push(...e);
+		const length = events.length - startLength;
+		if (length < 50) {
+			const limit = 50 - length;
+			const e = await pool.querySync(relays, { kinds: [1], until: getUntil(), limit });
+			events.push(...e.splice(0, limit));
 			events = events;
 		}
+
+		events = events.toSorted((x, y) => y.created_at - x.created_at);
 
 		if (events.length === startLength) {
 			end = true;
@@ -57,14 +62,14 @@
 	<div>End: {end}</div>
 </header>
 
-<ul>
+<div>
 	{#each events as event}
 		<div>
 			{new Date(event.created_at * 1000).toLocaleString()}
 			{event.pubkey.substring(0, 5)}: {event.content}
 		</div>
 	{/each}
-</ul>
+</div>
 
 <button on:click={load}>Load</button>
 
