@@ -10,4 +10,7 @@
 	<li>
 		<a href="/html5-qrcode">html5-qrcode</a>
 	</li>
+	<li>
+		<a href="/infinite-scroll">Infinite scroll</a>
+	</li>
 </ul>
