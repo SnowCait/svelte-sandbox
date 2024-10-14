@@ -45,7 +45,7 @@
 		if (length < 50) {
 			const limit = 50 - length;
 			const e = await pool.querySync(relays, { kinds: [1], until: getUntil(), limit });
-			events.push(...e.splice(0, limit));
+			events.push(...e.toSorted((x, y) => y.created_at - x.created_at).splice(0, limit));
 			events = events;
 		}
 
