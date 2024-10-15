@@ -44,8 +44,10 @@
 		const length = events.length - startLength;
 		if (length < 50) {
 			const limit = 50 - length;
-			const e = await pool.querySync(relays, { kinds: [1], until: getUntil(), limit });
-			events.push(...e.toSorted((x, y) => y.created_at - x.created_at).splice(0, limit));
+			const e = await fetcher.fetchLatestEvents(relays, { kinds: [1] }, limit, {
+				asOf: getUntil()
+			});
+			events.push(...e);
 			events = events;
 		}
 
