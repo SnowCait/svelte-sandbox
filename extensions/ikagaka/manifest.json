@@ -1,0 +1,51 @@
+{
+    "manifest_version": 3,
+    "name": "Ikagaka Extensions",
+    "description": "",
+    "version": "0.1",
+    "action": {
+        "default_icon": "icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://localhost/*"
+            ],
+            "css": [
+                "css/ikagaka.css"
+            ],
+            "js": [
+                "./vendor/js/es6-shim.js",
+                "./vendor/js/bluebird.js",
+                "./vendor/js/encoding.js",
+                "./vendor/js/browserfs.js",
+                "./vendor/js/shiorijk.js",
+                "./vendor/js/jszip.js",
+                "./vendor/js/eventemitter2.js",
+                "./vendor/js/NarLoader.js",
+                "./vendor/js/NanikaStorage.js",
+                "./vendor/js/NanikaStorage.backend.FS.js",
+                "./vendor/js/cuttlebone.js",
+                "./vendor/js/SakuraScriptPlayer.js",
+                "./vendor/js/ShioriLoader.js",
+                "./vendor/js/shioridetector-common_names.js",
+                "./vendor/js/WorkerClient.js",
+                "./vendor/js/URLWorkerClient.js",
+                "./vendor/js/NativeShioriWorkerClient.js",
+                "./vendor/js/kawariworker.js",
+                "./vendor/js/kawari7worker.js",
+                "./vendor/js/satoriworker.js",
+                "./vendor/js/yayaworker.js",
+                "./vendor/js/aya5worker.js",
+                "./vendor/js/NanikaDefaultEventDefinition.js",
+                "./vendor/js/ua-parser.js",
+                "./vendor/js/useragent_parser.js",
+                "./vendor/js/NanikaDefaultPlugin.js",
+                "./vendor/js/Nanika.js",
+                "./vendor/js/NanikaManager.js",
+                "js/ikagakaConfig.js",
+                "js/demo.js"
+            ]
+        }
+    ]
+}
