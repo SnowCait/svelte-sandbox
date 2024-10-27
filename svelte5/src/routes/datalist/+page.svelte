@@ -4,7 +4,7 @@
 		'https://api.yabu.me/v0/images/optimize/'
 	];
 
-	let server = '';
+	let server = servers[0];
 
 	function changed() {
 		console.log(server);
