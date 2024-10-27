@@ -13,4 +13,7 @@
 	<li>
 		<a href="/infinite-scroll">Infinite scroll</a>
 	</li>
+	<li>
+		<a href="/datalist">datalist</a>
+	</li>
 </ul>
