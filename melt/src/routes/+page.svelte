@@ -1,5 +1,4 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<h1>Melt UI</h1>
 
 <ul>
 	<li>
@@ -7,5 +6,13 @@
 	</li>
 	<li>
 		<a href="tabs">Tabs</a>
+	</li>
+</ul>
+
+<h2>Other libraries</h2>
+
+<ul>
+	<li>
+		<a href="crop">ValentinH/svelte-easy-crop</a>
 	</li>
 </ul>
