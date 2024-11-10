@@ -6,7 +6,7 @@ import {
 } from '$env/static/private';
 
 export const load: LayoutServerLoad = async () => {
-	if (CLOUDFLARE_API_TOKEN === undefined || CLOUDFLARE_ACCOUNT_ID === undefined || CLOUDFLARE_KV_NAMESPACE_ID === undefined) {
+	if (!CLOUDFLARE_API_TOKEN || !CLOUDFLARE_ACCOUNT_ID || !CLOUDFLARE_KV_NAMESPACE_ID) {
 		return {};
 	}
 	const key = 'test';
