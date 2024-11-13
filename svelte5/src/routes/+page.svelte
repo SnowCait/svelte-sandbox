@@ -14,6 +14,9 @@
 		<a href="/infinite-scroll">Infinite scroll</a>
 	</li>
 	<li>
+		<a href="/content-visibility">content-visibility</a>
+	</li>
+	<li>
 		<a href="/datalist">datalist</a>
 	</li>
 </ul>
