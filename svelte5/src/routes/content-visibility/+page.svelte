@@ -4,7 +4,7 @@
 	import { createRxForwardReq, createRxNostr, noopVerifier, uniq } from 'rx-nostr';
 	import { onMount } from 'svelte';
 
-	let events: NostrEvent[] = [];
+	let events: NostrEvent[] = $state([]);
 
 	const rxNostr = createRxNostr({ verifier: noopVerifier });
 	rxNostr.setDefaultRelays(['wss://yabu.me/', 'wss://nos.lol/', 'wss://relay.nostr.band/']);

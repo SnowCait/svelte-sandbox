@@ -19,4 +19,4 @@
 	}
 </script>
 
-<button on:click={req}>REQ</button>
+<button onclick={req}>REQ</button>

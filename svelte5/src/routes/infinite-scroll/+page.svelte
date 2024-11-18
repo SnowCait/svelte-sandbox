@@ -13,8 +13,8 @@
 			? Math.min(...events.map((event) => event.created_at))
 			: Math.floor(Date.now() / 1000);
 
-	let events: Event[] = [];
-	let end = false;
+	let events: Event[] = $state([]);
+	let end = $state(false);
 
 	onMount(async () => {
 		await load();
@@ -73,7 +73,7 @@
 	{/each}
 </div>
 
-<button on:click={load}>Load</button>
+<button onclick={load}>Load</button>
 
 <style>
 	header {

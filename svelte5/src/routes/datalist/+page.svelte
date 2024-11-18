@@ -4,7 +4,7 @@
 		'https://api.yabu.me/v0/images/optimize/'
 	];
 
-	let server = servers[0];
+	let server = $state(servers[0]);
 
 	function changed() {
 		console.log(server);
@@ -16,7 +16,7 @@
 	list="servers"
 	placeholder="https://..."
 	bind:value={server}
-	on:change={changed}
+	onchange={changed}
 />
 
 <datalist id="servers">
