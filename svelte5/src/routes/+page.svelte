@@ -19,4 +19,7 @@
 	<li>
 		<a href="/datalist">datalist</a>
 	</li>
+	<li>
+		<a href="/runes">Runes</a>
+	</li>
 </ul>
