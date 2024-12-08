@@ -22,4 +22,7 @@
 	<li>
 		<a href="/runes">Runes</a>
 	</li>
+	<li>
+		<a href="/actions">Actions</a>
+	</li>
 </ul>
