@@ -1,0 +1,20 @@
+<script lang="ts">
+	let { children } = $props();
+</script>
+
+<svelte:head>
+	<link
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css"
+		type="text/css"
+	/>
+</svelte:head>
+
+<main>{@render children()}</main>
+
+<style>
+	main {
+		max-width: 1024px;
+		margin: 0 auto;
+	}
+</style>
