@@ -25,4 +25,7 @@
 	<li>
 		<a href="/actions">Actions</a>
 	</li>
+	<li>
+		<a href="/web-api">Web API</a>
+	</li>
 </ul>
