@@ -1,18 +1,21 @@
 <script lang="ts">
+	import { createBubbler, preventDefault } from 'svelte/legacy';
+
+	const bubble = createBubbler();
 	import { sevenPairs, thirteenOrphans } from '$lib/evaluation';
 	import { parseHand, sortHand } from '$lib/mahjong';
 
-	let handString = '';
+	let handString = $state('');
 
-	$: hand = sortHand(parseHand(handString));
-	$: thirteenOrphansRemaining = thirteenOrphans(hand).remaining;
-	$: sevenPairsRemaining = sevenPairs(hand).remaining;
+	let hand = $derived(sortHand(parseHand(handString)));
+	let thirteenOrphansRemaining = $derived(thirteenOrphans(hand).remaining);
+	let sevenPairsRemaining = $derived(sevenPairs(hand).remaining);
 </script>
 
 <main>
 	<h1>Mahjong</h1>
 
-	<form on:submit|preventDefault>
+<form onsubmit={preventDefault(bubble('submit'))}>
 		<input type="text" bind:value={handString} />
 	</form>
 
