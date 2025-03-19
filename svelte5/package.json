@@ -41,6 +41,7 @@
 		"nostr-tools": "^2.7.2",
 		"rx-nostr": "^3.4.0",
 		"rxjs": "^7.8.1",
-		"sse.js": "^2.5.0"
+		"sse.js": "^2.5.0",
+		"svelte-persisted-store": "^0.12.0"
 	}
 }
