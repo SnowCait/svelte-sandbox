@@ -56,7 +56,15 @@
 	}
 </script>
 
-<h1>nos2x</h1>
+<h1>
+	<span>nos2x</span>
+	<a
+		href="https://github.com/SnowCait/svelte-sandbox/blob/main/svelte5/src/routes/nos2x/%2Bpage.svelte"
+		target="_blank"
+	>
+		GitHub
+	</a>
+</h1>
 
 <p>
 	Once decrypt fails, nos2x hangs and all subsequent methods do not return anything.
@@ -89,6 +97,10 @@
 {/each}
 
 <style>
+	a {
+		font-size: 2rem;
+	}
+
 	input[type='text'] {
 		width: 100%;
 		padding: 0.5rem;
