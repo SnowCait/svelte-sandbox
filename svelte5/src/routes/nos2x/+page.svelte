@@ -10,6 +10,7 @@
 
 <script lang="ts">
 	let content = crypto.randomUUID();
+	let text = '';
 	let logs: string[] = [];
 
 	async function getPublicKey(): Promise<void> {
@@ -69,7 +70,7 @@
 <p>
 	Once decrypt fails, nos2x hangs and all subsequent methods do not return anything.
 	<br />
-	(e.g. decrypt &gt; signEvent)
+	(e.g. decrypt empty string &gt; signEvent)
 	<br />
 	This does not resolve until nos2x is restarted.
 </p>
@@ -83,13 +84,16 @@
 <hr />
 <div>
 	<form onsubmit={signEvent}>
-		<input type="text" bind:value={content} placeholder="content" />
+		<input type="text" bind:value={content} />
 		<input type="submit" value="signEvent" />
 	</form>
 </div>
 <hr />
 <div>
-	<button onclick={decrypt}>decrypt (error)</button>
+	<form onsubmit={decrypt}>
+		<input type="text" bind:value={text} />
+		<input type="submit" value="decrypt" />
+	</form>
 </div>
 <hr />
 {#each logs as log}
