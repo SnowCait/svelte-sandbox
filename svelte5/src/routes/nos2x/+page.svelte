@@ -44,7 +44,7 @@
 			return;
 		}
 		try {
-			const content = await window.nostr?.nip04?.decrypt(pubkey, '');
+			const content = await window.nostr?.nip04?.decrypt(pubkey, text);
 			if (!content) {
 				return;
 			}
