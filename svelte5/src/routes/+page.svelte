@@ -31,6 +31,9 @@
 	<li>
 		<a href="/web-api">Web API</a>
 	</li>
+	<li>
+		<a href="/clipboard">Clipboard</a>
+	</li>
 </ul>
 
 <h2>Nostr</h2>
