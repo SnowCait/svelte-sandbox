@@ -58,7 +58,7 @@
 </script>
 
 <h1>
-	<span>nos2x</span>
+	<span>NIP-07</span>
 	<a
 		href="https://github.com/SnowCait/svelte-sandbox/blob/main/svelte5/src/routes/nos2x/%2Bpage.svelte"
 		target="_blank"
@@ -66,15 +66,6 @@
 		GitHub
 	</a>
 </h1>
-
-<p>
-	Once decrypt fails, nos2x hangs and all subsequent methods do not return anything.
-	<br />
-	(e.g. decrypt empty string &gt; signEvent)
-	<br />
-	This does not resolve until nos2x is restarted.
-</p>
-<p></p>
 
 <div>
 	<form onsubmit={getPublicKey}>

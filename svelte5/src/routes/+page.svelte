@@ -29,7 +29,7 @@
 		<a href="/persisted">svelte-persisted-store</a>
 	</li>
 	<li>
-		<a href="/nos2x">nos2x</a>
+		<a href="/nos2x">NIP-07</a>
 	</li>
 	<li>
 		<a href="/web-api">Web API</a>
