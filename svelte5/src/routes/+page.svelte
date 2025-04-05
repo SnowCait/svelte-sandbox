@@ -39,4 +39,7 @@
 	<li>
 		<a href="/nostr/nip07">NIP-07</a>
 	</li>
+	<li>
+		<a href="/nostr/nostr-login">Nostr-Login</a>
+	</li>
 </ul>
