@@ -5,6 +5,12 @@
 
 <h1>IndexedDB</h1>
 
+<ul>
+	<li>
+		<a href="/nostr-idb">nostr-idb</a>
+	</li>
+</ul>
+
 <h2>Add</h2>
 <Add />
 

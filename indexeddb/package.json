@@ -31,6 +31,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"dexie": "^4.0.1-beta.6"
+		"dexie": "^4.0.1-beta.6",
+		"nostr-idb": "^2.2.0"
 	}
 }
