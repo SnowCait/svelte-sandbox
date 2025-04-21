@@ -28,6 +28,14 @@
 	</div>
 {/if}
 
+<section>
+	<ul>
+		<li>
+			<a href="/mahjongsoul">雀魂</a>
+		</li>
+	</ul>
+</section>
+
 <style>
 	input {
 		width: 100%;
