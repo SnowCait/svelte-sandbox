@@ -10,6 +10,9 @@
 		<a href="/idb">idb</a>
 	</li>
 	<li>
+		<a href="/idb-keyval">idb-keyval</a>
+	</li>
+	<li>
 		<a href="/nostr-idb">nostr-idb</a>
 	</li>
 </ul>

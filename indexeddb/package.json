@@ -33,6 +33,7 @@
 	"dependencies": {
 		"dexie": "^4.0.1-beta.6",
 		"idb": "^8.0.2",
+		"idb-keyval": "^6.2.1",
 		"nostr-idb": "^2.2.0"
 	}
 }
