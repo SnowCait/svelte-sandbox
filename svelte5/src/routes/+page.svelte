@@ -40,6 +40,9 @@
 	<li>
 		<a href="/add-to-list">Add to list</a>
 	</li>
+	<li>
+		<a href="/twitter-text">twitter-text</a>
+	</li>
 </ul>
 
 <h2>Nostr</h2>
