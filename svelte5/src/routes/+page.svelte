@@ -37,6 +37,9 @@
 	<li>
 		<a href="/long-navigation-menu">Long navigation menu</a>
 	</li>
+	<li>
+		<a href="/add-to-list">Add to list</a>
+	</li>
 </ul>
 
 <h2>Nostr</h2>
