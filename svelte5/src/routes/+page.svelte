@@ -54,4 +54,7 @@
 	<li>
 		<a href="/nostr/nosskey">Nosskey</a>
 	</li>
+	<li>
+		<a href="/nostr/search">Search</a>
+	</li>
 </ul>
