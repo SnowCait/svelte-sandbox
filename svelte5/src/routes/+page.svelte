@@ -34,6 +34,9 @@
 	<li>
 		<a href="/clipboard">Clipboard</a>
 	</li>
+	<li>
+		<a href="/long-navigation-menu">Long navigation menu</a>
+	</li>
 </ul>
 
 <h2>Nostr</h2>
