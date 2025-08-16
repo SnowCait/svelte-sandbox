@@ -7,6 +7,9 @@
 	<li>
 		<a href="tabs">Tabs</a>
 	</li>
+	<li>
+		<a href="toast">Toast</a>
+	</li>
 </ul>
 
 <h2>Other libraries</h2>
