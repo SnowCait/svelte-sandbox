@@ -23,4 +23,7 @@
 	<li>
 		<a href="/auth">AUTH</a>
 	</li>
+	<li>
+		<a href="/publish">Publish (Send / Cast)</a>
+	</li>
 </ul>
