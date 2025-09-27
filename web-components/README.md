@@ -1,3 +1,5 @@
+![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/SnowCait/svelte-sandbox?utm_source=oss&utm_medium=github&utm_campaign=SnowCait%2Fsvelte-sandbox&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
+
 # Svelte + TS + Vite
 
 This template should help get you started developing with Svelte and TypeScript in Vite.
