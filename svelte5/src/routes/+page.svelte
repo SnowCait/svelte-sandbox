@@ -43,6 +43,9 @@
 	<li>
 		<a href="/twitter-text">twitter-text</a>
 	</li>
+	<li>
+		<a href="/time">Time</a>
+	</li>
 </ul>
 
 <h2>Nostr</h2>
