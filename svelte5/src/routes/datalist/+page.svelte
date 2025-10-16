@@ -11,13 +11,7 @@
 	}
 </script>
 
-<input
-	type="url"
-	list="servers"
-	placeholder="https://..."
-	bind:value={server}
-	onchange={changed}
-/>
+<input type="url" list="servers" placeholder="https://..." bind:value={server} onchange={changed} />
 
 <datalist id="servers">
 	{#each servers as server}
