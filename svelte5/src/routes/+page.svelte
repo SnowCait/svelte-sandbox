@@ -66,4 +66,7 @@
 	<li>
 		<a href="/nostr/search">Search</a>
 	</li>
+	<li>
+		<a href="/nostr/shrine">Nostr 神社</a>
+	</li>
 </ul>
