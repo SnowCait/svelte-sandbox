@@ -61,6 +61,9 @@
 		<a href="/nostr/nostr-login">Nostr-Login</a>
 	</li>
 	<li>
+		<a href="/nostr/nostr-zap">nostr-zap</a>
+	</li>
+	<li>
 		<a href="/nostr/nosskey">Nosskey</a>
 	</li>
 	<li>
