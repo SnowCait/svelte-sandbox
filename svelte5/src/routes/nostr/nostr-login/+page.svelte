@@ -4,8 +4,8 @@
 	onMount(async () => {
 		const { init } = await import('nostr-login');
 		await init({
-			onAuth: (npub) => {
-				console.log('[on auth]', npub);
+			onAuth: (npub, options) => {
+				console.log('[on auth]', npub, options);
 			}
 		});
 	});
