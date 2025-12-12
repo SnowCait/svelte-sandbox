@@ -52,6 +52,9 @@
 
 <ul>
 	<li>
+		<a href="/nostr/seckey">Secret Key</a>
+	</li>
+	<li>
 		<a href="/nostr/nip07">NIP-07</a>
 	</li>
 	<li>
