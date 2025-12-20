@@ -78,4 +78,7 @@
 	<li>
 		<a href="/nostr/shrine">Nostr 神社</a>
 	</li>
+	<li>
+		<a href="/nostr/nostr-idb">nostr-idb</a>
+	</li>
 </ul>
