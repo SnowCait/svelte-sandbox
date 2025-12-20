@@ -22,4 +22,7 @@
 	<li>
 		<a href="/web-api/idb">idb</a>
 	</li>
+	<li>
+		<a href="/web-api/dexie">Dexie.js</a>
+	</li>
 </ul>
