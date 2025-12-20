@@ -46,6 +46,9 @@
 	<li>
 		<a href="/time">Time</a>
 	</li>
+	<li>
+		<a href="/virtual-list">Virtual List</a>
+	</li>
 </ul>
 
 <h2>Nostr</h2>
