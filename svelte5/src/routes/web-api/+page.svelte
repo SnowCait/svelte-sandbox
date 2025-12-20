@@ -16,3 +16,10 @@
 
 <h2>Navigator</h2>
 <Navigator />
+
+<h2>IndexedDB</h2>
+<ul>
+	<li>
+		<a href="/web-api/idb">idb</a>
+	</li>
+</ul>
