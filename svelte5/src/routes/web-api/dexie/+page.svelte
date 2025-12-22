@@ -1,26 +1,22 @@
 <script lang="ts">
-	import Dexie, { type Table } from 'dexie';
+	import Dexie, { type EntityTable } from 'dexie';
 	import type { Event } from 'nostr-tools';
 	import { finalizeEvent, generateSecretKey, getPublicKey } from 'nostr-tools';
 	import { now } from 'rx-nostr';
 	import { onMount } from 'svelte';
 
-	class NostrDatabase extends Dexie {
-		events!: Table<Event, string>;
+	class NostrIDB {
+		private db: Dexie & {
+			events: EntityTable<Event, 'id'>;
+		};
 
 		constructor() {
-			super('dexie-test');
-			this.version(1).stores({
+			this.db = new Dexie('dexie-test') as Dexie & {
+				events: EntityTable<Event, 'id'>;
+			};
+			this.db.version(1).stores({
 				events: 'id, kind, pubkey, created_at, [kind+pubkey]'
 			});
-		}
-	}
-
-	class NostrIDB {
-		private db: NostrDatabase;
-
-		constructor(db: NostrDatabase) {
-			this.db = db;
 		}
 
 		async add(event: Event) {
@@ -53,9 +49,7 @@
 	const event2 = finalizeEvent({ kind: 1, content: 'hello', tags: [], created_at: now() }, seckey);
 
 	onMount(async () => {
-		const db = new NostrDatabase();
-		console.log(db);
-		const nostrIDB = new NostrIDB(db);
+		const nostrIDB = new NostrIDB();
 		await nostrIDB.add(event1);
 		await nostrIDB.add(event2);
 
