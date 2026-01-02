@@ -33,6 +33,9 @@
 		<li>
 			<a href="/mahjongsoul">雀魂</a>
 		</li>
+		<li>
+			<a href="/tenhou">天鳳</a>
+		</li>
 	</ul>
 </section>
 
