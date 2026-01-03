@@ -33,6 +33,16 @@ const 牌の種類: { [key: number]: string } = {
 	4: 'z'
 };
 
+const 牌文字列: { [key: number]: string } = {
+	41: '東',
+	42: '南',
+	43: '西',
+	44: '北',
+	45: '白',
+	46: '發',
+	47: '中'
+};
+
 export function num2pie(n: number | string): string {
 	if (typeof n === 'string') {
 		return n;
@@ -54,24 +64,24 @@ export function num2pie(n: number | string): string {
 		default: {
 			const type = Math.floor(n / 10);
 			const value = n % 10;
-			return `${value}${牌の種類[type]}`;
+			return type === 4 ? 牌文字列[n] : `${value}${牌の種類[type]}`;
 		}
 	}
 }
 
 type Title = [string, string];
 
-type Name = [string, string, string, string] | [string, string, string];
+type Name = [string, string, string, string];
 
 type Rule = {
 	disp: string;
 	aka: number;
 };
 
-type 牌 = number;
+export type 牌 = number;
 
 type Info = [number, number, number];
-type 点 = [number, number, number, number] | [number, number, number];
+type 点 = [number, number, number, number];
 type ドラ = 牌[];
 
 type 局 = [Info, 点, ドラ, ドラ];
