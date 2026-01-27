@@ -2,6 +2,9 @@
 
 <ul>
 	<li>
+		<a href="/rune">Rune</a>
+	</li>
+	<li>
 		<a href="/cloudflare/kv">Cloudflare KV</a>
 	</li>
 	<li>
