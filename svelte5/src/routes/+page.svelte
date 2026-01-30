@@ -35,6 +35,9 @@
 		<a href="/web-api">Web API</a>
 	</li>
 	<li>
+		<a href="/battery">Battery API</a>
+	</li>
+	<li>
 		<a href="/clipboard">Clipboard</a>
 	</li>
 	<li>
