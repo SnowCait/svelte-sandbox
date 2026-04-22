@@ -55,6 +55,9 @@
 	<li>
 		<a href="/virtual-list">Virtual List</a>
 	</li>
+	<li>
+		<a href="/virtua">Virtua</a>
+	</li>
 </ul>
 
 <h2>Nostr</h2>
