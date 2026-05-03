@@ -10,10 +10,14 @@
 			].join(',')
 		);
 
+		if (popup === null) {
+			return;
+		}
+
 		window.addEventListener(
 			'message',
 			(e: MessageEvent<{ ready: boolean }>) => {
-				if (e.origin !== window.origin) {
+				if (e.origin !== window.origin || e.source !== popup) {
 					return;
 				}
 
