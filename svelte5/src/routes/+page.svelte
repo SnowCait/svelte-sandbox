@@ -64,6 +64,9 @@
 	<li>
 		<a href="/boring-avatars">Boring Avatars</a>
 	</li>
+	<li>
+		<a href="/google/analytics">Google Analytics</a>
+	</li>
 </ul>
 
 <h2>Nostr</h2>
