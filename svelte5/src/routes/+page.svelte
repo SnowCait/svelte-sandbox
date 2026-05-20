@@ -61,6 +61,9 @@
 	<li>
 		<a href="/virtua">Virtua</a>
 	</li>
+	<li>
+		<a href="/boring-avatars">Boring Avatars</a>
+	</li>
 </ul>
 
 <h2>Nostr</h2>
