@@ -67,6 +67,9 @@
 	<li>
 		<a href="/google/analytics">Google Analytics</a>
 	</li>
+	<li>
+		<a href="/icons">Icons</a>
+	</li>
 </ul>
 
 <h2>Nostr</h2>
